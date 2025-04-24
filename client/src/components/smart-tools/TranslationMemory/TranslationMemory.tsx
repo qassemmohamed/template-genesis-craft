@@ -1,51 +1,49 @@
-import React, { useState } from "react";
-import axios from "axios";
 
-const TranslationMemory = () => {
-  const [inputText, setInputText] = useState("");
-  const [result, setResult] = useState("");
+import React from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 
-  const handleTranslate = async () => {
-    try {
-      const response = await axios.post(
-        "https://targum.io/api/translate",
-        {
-          text: inputText,
-          source: "en",
-          target: "es",
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        },
-      );
+import TranslateTab from "./tabs/TranslateTab";
+import MemoryTab from "./tabs/MemoryTab";
+import HistoryTab from "./tabs/HistoryTab";
+import UploadTab from "./tabs/UploadTab";
 
-      setResult(response.data.translation);
-    } catch (error) {
-      console.error(
-        "Translation error:",
-        error.response?.data || error.message,
-      );
-      setResult("Translation failed. Check console for details.");
-    }
-  };
-
+const TranslationMemory: React.FC = () => {
   return (
-    <div style={{ padding: 20 }}>
-      <h2>Translation</h2>
-      <textarea
-        rows={4}
-        cols={50}
-        value={inputText}
-        onChange={(e) => setInputText(e.target.value)}
-        placeholder="Enter text..."
-        style={{ marginBottom: 10 }}
-      />
-      <br />
-      <button onClick={handleTranslate}>Submit</button>
-      <p>{result}</p>
-    </div>
+    <Card className="w-full">
+      <CardHeader>
+        <CardTitle>Translation Memory</CardTitle>
+        <CardDescription>
+          Translate texts and manage your translation memory database
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Tabs defaultValue="translate">
+          <TabsList className="grid w-full grid-cols-4">
+            <TabsTrigger value="translate">Translate</TabsTrigger>
+            <TabsTrigger value="memory">Memory</TabsTrigger>
+            <TabsTrigger value="history">History</TabsTrigger>
+            <TabsTrigger value="upload">Upload</TabsTrigger>
+          </TabsList>
+          
+          <TabsContent value="translate" className="mt-6">
+            <TranslateTab />
+          </TabsContent>
+          
+          <TabsContent value="memory" className="mt-6">
+            <MemoryTab />
+          </TabsContent>
+          
+          <TabsContent value="history" className="mt-6">
+            <HistoryTab />
+          </TabsContent>
+          
+          <TabsContent value="upload" className="mt-6">
+            <UploadTab />
+          </TabsContent>
+        </Tabs>
+      </CardContent>
+    </Card>
   );
 };
 
