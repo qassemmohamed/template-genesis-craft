@@ -1,0 +1,4 @@
+   "username": "samtax",
+    "email": "samtax@admin.com",
+    "password": "samtax123456",
+    "role": "admin"

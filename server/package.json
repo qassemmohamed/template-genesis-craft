@@ -1,0 +1,40 @@
+{
+  "name": "samtax-server",
+  "version": "1.0.0",
+  "description": "sam-tax server side",
+  "keywords": [
+    "samtax"
+  ],
+  "homepage": "https://github.com/balshaer/samtax#readme",
+  "bugs": {
+    "url": "https://github.com/balshaer/samtax/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balshaer/samtax.git"
+  },
+  "license": "ISC",
+  "author": "samtax",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-async-handler": "^1.2.0",
+    "helmet": "^8.0.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.12.1",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

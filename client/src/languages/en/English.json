@@ -1,0 +1,179 @@
+{
+  "app": {
+    "loading": "Loading ...",
+    "seemore" : "See more",
+    "hide" : "Hide"
+  },
+  "mode": {
+    "system": "System",
+    "light": "Light",
+    "dark": "Dark",
+    "defaultDark": "Dark (System)",
+    "defaultLight": "Light (System)"
+  },
+  "navbar": {
+    "services": "Our Services",
+    "contact": "Contact Us",
+    "about": "About Our Firm",
+    "bookabar": "Schedule an Appointment",
+    "language": "English",
+    "languageToast": "Language changed to English"
+  },
+  "banner": {
+    "title": "Professional Financial and Linguistic Services",
+    "description": "Your Esteemed Partner for Taxation, Translation, and Immigration Services. We specialize in tax preparation, bookkeeping, and certified translation services. Allow us to manage your financial and legal requirements with the utmost professionalism and diligence.",
+    "getStarted": "Get Started",
+    "aboutUs": "About Our Firm"
+  },
+  "errors": {
+    "404": "404 | This page is not found",
+    "backToHome": "Back to home"
+  },
+  "about": {
+    "title": "About the Proprietor",
+    "description1": "Mahmoud Samaoui is a certified tax preparer and professional translator, serving individuals and small enterprises in Philadelphia. As an esteemed member of the American Translators Association, Mahmoud offers expert translation services in English, Arabic, and French.",
+    "description2": "He is dedicated to providing personalized service in areas such as tax preparation, bookkeeping, and immigration support. Mahmoud endeavors to simplify complex processes and deliver reliable solutions tailored to each client's unique requirements."
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Quick answers to common questions about our services",
+    "moreQuestions": "Have more questions? Contact us",
+    "items": [
+      {
+        "question": "What services does your firm offer?",
+        "answer": "We offer Tax E-Filing Services, Bookkeeping Services, Professional Translation Services in English, Arabic, and French, Immigration Assistance Services, and Notary Public Services to meet your financial and legal needs."
+      },
+      {
+        "question": "Who will be handling my case?",
+        "answer": "Mahmoud Samaoui, a certified tax preparer and professional translator, will personally handle your case. As a member of the American Translators Association, he provides expert services tailored to your specific requirements."
+      },
+      {
+        "question": "What languages do you support for translation?",
+        "answer": "We specialize in translations between English, Arabic, and French for both individual and corporate clients. Our certified translators ensure accurate and contextually appropriate translations for all document types."
+      },
+      {
+        "question": "How can I schedule an appointment?",
+        "answer": "You can schedule an appointment by calling us at (267) 304-7121, emailing msamaoui@outlook.com, or using the 'Schedule an Appointment' option on our website."
+      },
+      {
+        "question": "Where is your office located?",
+        "answer": "Our office is located at 1787 S 8th St (intersection of 8th St and Moore St) in Philadelphia, PA 19148, USA."
+      }
+    ]
+  },
+  "footer": {
+    "locationTitle": "Our Office Location",
+    "services": "Our Services",
+    "company": "Our Firm",
+    "helpfulLinks": "Useful Resources",
+    "address": "1787 S 8th St (Intersection of 8th St and Moore St) Philadelphia, PA 19148 USA",
+    "phone": "(267) 304-7121",
+    "email": "msamaoui@outlook.com",
+    "contactMessage": "For tax, translation, and legal support, please do not hesitate to contact us. We are here to facilitate your processes and meet your needs.",
+    "legal": {
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookie Policy"
+    },
+    "copyright": "© {{year}} Mahmoud Samaoui. All rights reserved."
+  },
+ "contact": {
+  "title": "Contact Us",
+  "subtitle": "Ready to enhance your financial strategy or in need of expert translation? We invite you to connect with us.",
+  "intro": "Our team is here to assist you with tax, translation, and immigration services. Whether you're looking for help with tax filing, need professional translation, or seeking guidance on immigration matters, we're here to offer our expertise.",
+  "servicesHeader": "Our Services Include:",
+  "taxService": "Expert tax filing and financial advice to ensure you're maximizing your returns and staying compliant.",
+  "translationService": "Professional translation services for various languages, ensuring accuracy and clarity in all your documents.",
+  "immigrationService": "Comprehensive immigration services to guide you through the process, from application to approval.",
+  "nameInput": "Your name or company name",
+  "emailInput": "email@example.com",
+  "messageInput": "Your message",
+  "send": "Submit Inquiry",
+  "errorMessage": "Please fill in all fields",
+  "successfulMessage": "Message sent successfully",
+  "failedMessage": "Failed to send message. Please try again."
+}
+,
+  "footerLinks": {
+    "services": {
+      "taxEFiling": "Tax E-Filing Services",
+      "bookkeeping": "Bookkeeping Services",
+      "translation": "Professional Translation Services",
+      "immigration": "Immigration Assistance Services",
+      "notary": "Notary Public Services"
+    },
+    "company": {
+      "about": "About Our Firm",
+      "meetTheTeam": "Meet Our Team",
+      "contactUs": "Contact Us"
+    },
+    "helpfulLinks": {
+      "faqs": "Frequently Asked Questions",
+      "resources": "Resources",
+      "blog": "Our Blog"
+    },
+    "legal": {
+      "termsConditions": "Terms & Conditions",
+      "privacyPolicy": "Privacy Policy",
+      "cookiePolicy": "Cookie Policy"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "menuTitle": "Services",
+    "subtitle": "We offer a diverse array of services tailored to address your financial and legal requirements",
+    "tax_efiling": {
+      "title": "Tax E-Filing Services",
+      "description": "Expert tax return preparation for individuals and businesses.",
+      "fullDescription": "Our Tax E-Filing Services provide comprehensive support for individuals and small to medium-sized enterprises in navigating the complex landscape of tax regulations. We offer expert guidance in preparing and submitting accurate tax returns, ensuring compliance with the latest tax laws and maximizing potential deductions. Our certified tax professionals utilize state-of-the-art e-filing systems to securely and efficiently process your returns. We handle a wide range of tax situations, from straightforward individual returns to more complex scenarios involving multiple income sources, investments, and business structures. Our service includes year-round tax planning advice to help you make informed financial decisions and minimize your tax liabilities."
+    },
+    "bookkeeping": {
+      "title": "Bookkeeping Services",
+      "description": "Meticulous financial record-keeping for small businesses.",
+      "fullDescription": "Our Bookkeeping Services are designed to provide small and medium-sized businesses with robust financial management support. We employ cutting-edge accounting software and industry best practices to maintain accurate and up-to-date financial records. Our services encompass daily transaction recording, bank reconciliation, accounts payable and receivable management, and generation of financial statements. We ensure that your books are always audit-ready and compliant with relevant accounting standards. Our experienced bookkeepers work closely with you to understand your business needs, providing insights into your financial health and identifying areas for potential cost savings. We also offer customized financial reporting to aid in informed decision-making and strategic planning for your business growth."
+    },
+    "translation": {
+      "title": "Professional Translation Services",
+      "description": "Accurate translations in English, Arabic, and French.",
+      "fullDescription": "Our Professional Translation Services offer high-quality linguistic solutions for a diverse range of needs. We specialize in translations between English, Arabic, and French, catering to both individual and corporate clients. Our team of certified translators possesses not only linguistic expertise but also domain-specific knowledge, ensuring accurate and contextually appropriate translations. We handle a wide array of document types, including legal contracts, medical reports, technical manuals, marketing materials, and academic papers. Our translation process involves multiple stages of quality control, including proofreading and editing, to guarantee the highest standards of accuracy and clarity. We also offer localization services to ensure that your content resonates with the target culture. For time-sensitive projects, we provide express translation services without compromising on quality."
+    },
+    "immigration": {
+      "title": "Immigration Assistance Services",
+      "description": "Comprehensive support for your immigration journey.",
+      "fullDescription": "Our Immigration Assistance Services provide comprehensive support to individuals navigating the complex immigration process. We offer expert guidance on various immigration pathways, including work visas, family sponsorship, student visas, and permanent residency applications. Our services include thorough assessment of eligibility, meticulous preparation and review of all required documentation, and assistance with form filling to ensure accuracy and completeness. We stay abreast of the latest immigration laws and regulations to provide you with up-to-date advice. Our team can also assist with preparing for immigration interviews, responding to requests for evidence, and handling appeals if necessary. We understand the significance of your immigration journey and are committed to providing personalized support every step of the way, from initial consultation to the successful resolution of your case."
+    },
+    "notary": {
+      "title": "Notary Public Services",
+      "description": "Official authentication of important documents.",
+      "fullDescription": "Our Notary Public Services offer official and legally recognized authentication for a wide range of important documents. As commissioned notaries, we are authorized to witness the signing of important papers and administer oaths. Our services include notarizing affidavits, real estate deeds, power of attorney documents, wills, and various legal contracts. We ensure that all notarizations are performed in strict compliance with state laws and regulations, maintaining the highest standards of integrity and impartiality. Our notaries are well-versed in the proper procedures for identifying signers and detecting potential fraud or coercion. We offer flexible scheduling options, including mobile notary services for clients unable to visit our office. Our goal is to provide efficient, reliable, and professional notarization services to safeguard the legality and authenticity of your important documents."
+    }
+  },
+  "stats": {
+    "trustedServices": "Trusted Our Services That Make a Difference",
+    "description": "With years of experience in tax preparation, bookkeeping, and immigration services, we provide reliable and efficient solutions for individuals and businesses alike.",
+    "taxReturns": "Tax Returns",
+    "happyClients": "Happy Clients",
+    "maximizedRefunds": "Maximized Refunds",
+    "clientSavings": "Client Savings",
+    "taxExpertise": "Tax Expertise",
+    "successfulAudits": "Successful Audits",
+    "onTimeFilings": "On-Time Filings",
+    "businessClients": "Business Clients",
+    "taxDeductions": "Tax Deductions",
+    "newClients": "New Clients",
+    "financialPlans": "Financial Plans",
+    "eFilingSubmissions": "E-filing Submissions",
+    "clientRetention": "Client Retention",
+    "taxCompliance": "Tax Compliance",
+    "consultationSessions": "Consultation Sessions",
+    "servedIndustries": "Served Industries",
+    "irsPartnerships": "IRS Partnerships",
+    "millionDescription": "Successfully managed tax filings for clients across multiple states, ensuring timely submissions and maximizing potential refunds.",
+    "yearsExperience": "More than 20 years of combined experience in tax, accounting, and financial services, giving our clients access to expert advice and support."
+  },
+  "cta": {
+    "startTaxJourney": "Start Your Tax Journey Today",
+    "description": "Our experienced tax experts are here to guide you every step of the way. Whether you're filing for the first time or looking to optimize your returns, we make the process simple and stress-free.",
+    "getStarted": "Get Started"
+  }
+}

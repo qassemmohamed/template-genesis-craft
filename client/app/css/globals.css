@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overscroll-behavior: none !important;
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+    --card: #ffffff;
+    --card-foreground: #0a0a0a;
+    --popover: #ffffff;
+    --popover-foreground: #0a0a0a;
+    --primary: #1a1a1a;
+    --primary-foreground: #fafafa;
+    --secondary: #ffffff;
+    --secondary-foreground: #1a1a1a;
+    --muted: #f5f5f5;
+    --muted-foreground: #737373;
+    --accent: #f5f5f5;
+    --accent-foreground: #1a1a1a;
+    --destructive: #d32f2f;
+    --destructive-foreground: #fafafa;
+    --border: #e5e5e5;
+    --input: #e5e5e5;
+    --ring: #0a0a0a;
+    --radius: 0.5rem;
+    --magic-card: #0d0d0d09;
+    --headline: #0a0a0a;
+    --paragraph: #0a0a0ad4;
+    --button: #0070f3;
+    --scroll: #52525b;
+    --button-border: #0070f3;
+    --button-hover: #0761d1;
+    --button-text: #ffffff;
+    --button-text-hover: #ffffff;
+    --card-background: #ffffff;
+    --card-background-effect: #ffffff80;
+    --card-border-color: #e5e5e5;
+    --card-headline: #0a0a0a;
+    --card-paragraph: #737373;
+    --link-color: #0070f3;
+    --link-hover: #0a0a0a;
+    --nav-item: #737373;
+    --Logo-background: #0a0a0a;
+    --Logo-text-color: #ffffff;
+    --gradient-color-1: #ffffff80;
+    --gradient-color-2: #f5f5f580;
+    --input-background: #ffffff;
+    --input-border-color: #e5e5e5;
+    --badge-background: #0070f3;
+    --badge-text: #ffffff;
+    --skeleton-color: #f0f0f0;
+    --tertiary-color: #0070f3;
+    --footer-border-color: #e5e5e5;
+    --footer-text: #737373;
+    --menu-color: #737373;
+    --input-text: #0a0a0a;
+    --input-border: #e5e5e5;
+    --selectBox-border: #0070f3;
+    --outline-button-text: #0070f3;
+    --mark: #0a0a0a;
+    --active: #0a0a0a;
+    --active-text: #ffffff;
+    --mobile-nav: #ffffff;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --chart-1: #e6612d;
+    --chart-2: #209b85;
+    --chart-3: #174f66;
+    --chart-4: #e3b447;
+    --chart-5: #fba833;
+  }
+
+  .dark {
+    --background: #000000;
+    --foreground: #ffffff;
+    --card: #111111;
+    --card-foreground: #ffffff;
+    --popover: #111111;
+    --popover-foreground: #ffffff;
+    --primary: #ffffff;
+    --primary-foreground: #000000;
+    --secondary: #000000;
+    --secondary-foreground: #ffffff;
+    --muted: #1a1a1a;
+    --muted-foreground: #999999;
+    --accent: #1a1a1a;
+    --accent-foreground: #ffffff;
+    --destructive: #7a1c1c;
+    --destructive-foreground: #ffffff;
+    --border: #333333;
+    --input: #333333;
+    --ring: #666666;
+    --magic-card: #9c9c9c16;
+
+    --headline: #ffffff;
+    --paragraph: #ffffffa6;
+    --button: #0070f3;
+    --scroll: #52525b;
+    --button-border: #0070f3;
+    --button-hover: #0761d1;
+    --button-text: #ffffff;
+    --button-text-hover: #ffffff;
+    --card-background: #111111;
+    --card-background-effect: #11111180;
+    --card-border-color: #333333;
+    --card-headline: #ffffff;
+    --card-paragraph: #888888;
+    --link-color: #0070f3;
+    --link-hover: #ffffff;
+    --nav-item: #888888;
+    --Logo-background: #ffffff;
+    --Logo-text-color: #000000;
+    --gradient-color-1: #00000080;
+    --gradient-color-2: #11111180;
+    --input-background: #111111;
+    --input-border-color: #333333;
+    --badge-background: #0070f3;
+    --badge-text: #ffffff;
+    --skeleton-color: #222222;
+    --tertiary-color: #0070f3;
+    --footer-border-color: #333333;
+    --footer-text: #888888;
+    --menu-color: #888888;
+    --input-text: #ffffff;
+    --input-border: #333333;
+    --selectBox-border: #0070f3;
+    --outline-button-text: #0070f3;
+    --mark: #ffffff;
+    --active: #ffffff;
+    --active-text: #000000;
+    --mobile-nav: #000000e6;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --chart-1: #3a6eff;
+    --chart-2: #2ebc8a;
+    --chart-3: #ffb347;
+    --chart-4: #a050e6;
+    --chart-5: #e63956;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    scroll-behavior: smooth !important;
+    border-color: var(--input) !important;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.container {
+  @apply mx-auto max-w-[1070px] px-4;
+}
+
+*::selection {
+  @apply bg-[#04182f] text-[#2dd4bf];
+  opacity: 0.1;
+}
+
+*::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background-color: var(--background);
+  border: 2px solid var(--background);
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: var(--background);
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: var(--background);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: var(--scroll);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #494951;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #424249;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-[var(--headline)];
+}
+
+p,
+label {
+  @apply text-[var(--paragraph)];
+}
+
+.annotate {
+  @apply text-transparent;
+}
+
+.annotate::selection {
+  @apply text-transparent;
+}
+
+.test1 {
+  @apply border-2 border-black bg-green-300 text-black;
+}
+
+.test2 {
+  @apply border-2 border-black bg-red-300 text-black;
+}
+
+.test3 {
+  @apply border-2 border-black bg-blue-300 text-black;
+}
+.test4 {
+  @apply border-2 border-black bg-yellow-300 text-black;
+}
+
+.hoverd,
+.hoverd:hover {
+  transition: all 0.3s ease 0s !important;
+}
+
+
+.icon{
+  @apply bg-[var(--card-background)] border
+}
