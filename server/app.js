@@ -24,8 +24,11 @@ const reportRoutes = require("./routes/report.routes.js");
 // Create Express app
 const app = express();
 
-// Middleware
-app.use(cors());
+// Enhanced security and CORS configuration
+app.use(cors({
+  origin: process.env.CLIENT_URL || "http://localhost:8080",
+  credentials: true,
+}));
 app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -48,10 +51,19 @@ app.get("/api/status", (req, res) => {
   res.json({ status: "API is running", timestamp: new Date() });
 });
 
-// Error handling middleware
+// Enhanced error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).json({ message: "Something went wrong!" });
+  
+  const statusCode = err.statusCode || 500;
+  const message = err.message || "Something went wrong!";
+  
+  res.status(statusCode).json({
+    status: "error",
+    statusCode,
+    message,
+    ...(process.env.NODE_ENV === "development" && { stack: err.stack }),
+  });
 });
 
 // Connect to MongoDB and start server
