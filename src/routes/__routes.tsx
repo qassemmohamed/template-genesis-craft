@@ -1,14 +1,26 @@
+
 import React, { Suspense, lazy } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import LoadingPage from "@/pages/LoadingPage";
 import ProtectedRoute from "@/components/common/ProtectedRoute";
+import Login from "@/pages/Login";
+import Register from "@/pages/Register";
+import ForgotPassword from "@/pages/ForgotPassword";
+import ResetPassword from "@/pages/ResetPassword";
+import Dashboard from "@/pages/Dashboard";
+import Statistics from "@/pages/Statistics";
+import FAQs from "@/pages/FAQs";
+import Languages from "@/pages/Languages";
+import Services from "@/pages/Services";
+import Inbox from "@/pages/Inbox";
+import Profile from "@/pages/Profile";
 
 // Import SmartTools components
 import DocumentExtractor from "@/components/smart-tools/DocumentExtractor";
 import ClientServiceTracker from "@/components/smart-tools/ClientServiceTracker";
 import IntegratedCalendar from "@/components/smart-tools/Calendar/IntegratedCalendar";
 import TemplateGenerator from "@/components/smart-tools/Templates/TemplateGenerator";
-import TaskManagement from "@/components/smart-tools/TaskManagement";
+import TaskManagement from "@/components/smart-tools/Tasks/TaskManagement";
 import SmartReports from "@/components/smart-tools/SmartReports";
 import TranslationMemory from "@/components/smart-tools/TranslationMemory/TranslationMemory";
 import ClientCommunication from "@/components/smart-tools/ClientCommunication";

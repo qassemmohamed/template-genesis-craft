@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
@@ -5,14 +6,14 @@ import EventItem from "./EventItem";
 import EventForm from "./EventForm";
 import { Event } from "@/types/index";
 import { Card } from "@/components/ui/card";
-import { useEvents } from "@/hooks/useEvents"; // Ensure you have the hooks to interact with the backend
+import { useToast } from "@/hooks/use-toast";
+import { calendarApi } from "@/utils/api";
 
 interface EventsListProps {
   events: Event[];
   selectedDate: string;
   onAddEvent: (event: Event) => void;
   onUpdateEvent: (event: Event) => void;
-  onToggleComplete: (id: string) => void;
   onDeleteEvent: (id: string) => void;
 }
 
@@ -23,8 +24,10 @@ const EventsList = ({
   onUpdateEvent,
   onDeleteEvent,
 }: EventsListProps) => {
+  const { toast } = useToast();
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [editingEvent, setEditingEvent] = useState<Event | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const filteredEvents = events.filter((event) => event.date === selectedDate);
 
@@ -44,17 +47,55 @@ const EventsList = ({
   };
 
   const handleFormSubmit = async (event: Event) => {
-    if (editingEvent) {
-      await onUpdateEvent(event); // API call to update event
-    } else {
-      await onAddEvent(event); // API call to add event
+    try {
+      setIsSubmitting(true);
+      
+      if (editingEvent) {
+        await calendarApi.updateEvent(event.id, event);
+        toast({
+          title: "Event updated",
+          description: "The event has been successfully updated.",
+        });
+        onUpdateEvent(event);
+      } else {
+        const response = await calendarApi.createEvent(event);
+        toast({
+          title: "Event created",
+          description: "The new event has been successfully created.",
+        });
+        onAddEvent({ ...event, id: response.data.id });
+      }
+      
+      setIsFormOpen(false);
+      setEditingEvent(null);
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to save the event. Please try again.",
+        variant: "destructive",
+      });
+      console.error("Error saving event:", error);
+    } finally {
+      setIsSubmitting(false);
     }
-    setIsFormOpen(false);
-    setEditingEvent(null);
   };
 
   const handleDeleteEvent = async (id: string) => {
-    await onDeleteEvent(id); // API call to delete event
+    try {
+      await calendarApi.deleteEvent(id);
+      toast({
+        title: "Event deleted",
+        description: "The event has been successfully deleted.",
+      });
+      onDeleteEvent(id);
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to delete the event. Please try again.",
+        variant: "destructive",
+      });
+      console.error("Error deleting event:", error);
+    }
   };
 
   return (
@@ -82,6 +123,7 @@ const EventsList = ({
               selectedDate={selectedDate}
               onSubmit={handleFormSubmit}
               onCancel={handleFormClose}
+              isSubmitting={isSubmitting}
             />
           </motion.div>
         )}
@@ -94,7 +136,6 @@ const EventsList = ({
               <EventItem
                 key={event.id}
                 event={event}
-                // onToggleComplete={onToggleComplete}
                 onEdit={handleEditClick}
                 onDelete={handleDeleteEvent}
               />

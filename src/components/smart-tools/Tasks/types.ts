@@ -20,3 +20,16 @@ export interface ServiceStyle {
   bg: string;
   text: string;
 }
+
+// API response interfaces
+export interface TaskAPIResponse {
+  success: boolean;
+  data: Task[];
+  message?: string;
+}
+
+export interface SingleTaskAPIResponse {
+  success: boolean;
+  data: Task;
+  message?: string;
+}

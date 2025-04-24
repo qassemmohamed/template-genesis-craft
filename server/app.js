@@ -18,6 +18,8 @@ const calendarRoutes = require("./routes/calendar.routes.js");
 const templateRoutes = require("./routes/template.routes.js");
 const documentRoutes = require("./routes/document.routes.js");
 const communicationRoutes = require("./routes/communication.routes.js");
+const contentRoutes = require("./routes/content.routes.js");
+const reportRoutes = require("./routes/report.routes.js");
 
 // Create Express app
 const app = express();
@@ -38,6 +40,13 @@ app.use("/api/calendar", calendarRoutes);
 app.use("/api/templates", templateRoutes);
 app.use("/api/documents", documentRoutes);
 app.use("/api/communication", communicationRoutes);
+app.use("/api/content", contentRoutes);
+app.use("/api/reports", reportRoutes);
+
+// API status endpoint
+app.get("/api/status", (req, res) => {
+  res.json({ status: "API is running", timestamp: new Date() });
+});
 
 // Error handling middleware
 app.use((err, req, res, next) => {
